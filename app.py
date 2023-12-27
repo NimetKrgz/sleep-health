@@ -41,9 +41,7 @@ elif app_mode == "Diagnosis":
             </div>"""
             st.markdown(style, unsafe_allow_html=True)
             st.header('How to make it?')
-            st.write('You can make an approximate price estimate by updating the values you see below in accordance with the \
-                    features of the house you are looking for - at the specified intervals. \
-                    This will enable customers to make informed decisions when buying or selling properties.')
+            st.write('Enter your personal values and press the prediction button. Unlock sleep insights with the Sleep Health Dataset')
 
             st.divider()
             left, right = st.columns((2, 2))
