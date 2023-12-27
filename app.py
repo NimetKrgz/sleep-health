@@ -168,8 +168,8 @@ elif app_mode == "Diagnosis":
 
         # load the train model
         # with open('./xgb_model.pkl', 'rb') as rf:
-        model = pickle.load(open('D:\Egitimler\miuul_VB_yetistirme_bootcamp\Miuul_VB_Bootcamp\model_1.pkl', 'rb'))
-        scaler = pickle.load(open('D:\Egitimler\miuul_VB_yetistirme_bootcamp\Miuul_VB_Bootcamp\model_1_scaler.pkl', 'rb'))
+        model = pickle.load(open('./model_1.pkl', 'rb'))
+        scaler = pickle.load(open('./model_1_scaler.pkl', 'rb'))
 
         def predict(GENDER, AGE, SLEEP_DURATION, PHYSICAL_ACTIVITY_LEVEL, HEART_RATE, DAILY_STEPS, BLOOD_PRESSURE_SYSTOLIC, BLOOD_PRESSURE_DIASTOLIC, QUALITY_OF_SLEEP_5, QUALITY_OF_SLEEP_6, QUALITY_OF_SLEEP_7, QUALITY_OF_SLEEP_8, QUALITY_OF_SLEEP_9, STRESS_LEVEL_4, STRESS_LEVEL_5, STRESS_LEVEL_6, STRESS_LEVEL_7, STRESS_LEVEL_8, BMI_CATEGORY_Obese, BMI_CATEGORY_Overweight, BP_CAT_Evre_2_HT, BP_CAT_Normal):
             #num_lists = [AGE, SLEEP_DURATION,PHYSICAL_ACTIVITY_LEVEL,HEART_RATE,DAILY_STEPS,BLOOD_PRESSURE_SYSTOLIC,BLOOD_PRESSURE_DIASTOLIC]
@@ -218,7 +218,7 @@ elif app_mode == 'About Project':
         st.image('./uyku.jpg', caption="")
 
     with ap_col2:
-        df = pd.read_csv("./archive/Sleep_health_and_lifestyle_dataset.csv")
+        df = pd.read_csv("./Sleep_health_and_lifestyle_dataset.csv")
         st.dataframe(df, height=450)  # Same as st.write(df)
 
     st.header('Dataset Overview')
